@@ -1,0 +1,308 @@
+/*==================================================
+
+    IMPROBABLE
+    Galería de Arte
+
+==================================================*/
+
+.gallery-panel{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.7s;
+
+    z-index:20;
+
+}
+
+.gallery-panel.active{
+
+    opacity:1;
+
+    pointer-events:auto;
+
+}
+
+.gallery-window{
+
+    width:88%;
+
+    max-width:1450px;
+
+    height:82%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    border-radius:24px;
+
+    background:rgba(18,22,40,.45);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.gallery-header{
+
+    padding:30px 40px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.gallery-header h2{
+
+    color:#9138f7;
+
+    font-size:38px;
+
+}
+
+.gallery-content{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:30px;
+
+
+    color:white;
+
+}
+
+.gallery-footer{
+
+    padding:20px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.gallery-grid{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+    gap:25px;
+
+    padding:35px;
+
+}
+
+.gallery-content::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.gallery-content::-webkit-scrollbar-thumb{
+
+    background:#9138f7;
+
+    border-radius:20px;
+
+}
+
+.gallery-content::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+.art-card{
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    background:rgba(255,255,255,.04);
+
+}
+
+.art-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.art-card img{
+
+    width:100%;
+
+    height:230px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+.art-info{
+
+    padding:18px;
+
+}
+
+.art-info h3{
+
+    color:white;
+
+}
+
+.art-info p{
+
+    color:#cfcfcf;
+
+    margin-top:5px;
+
+}
+
+.image-viewer{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+    backdrop-filter:blur(14px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.35s;
+
+    z-index:999;
+
+}
+
+.image-viewer.active{
+
+    opacity:1;
+
+    pointer-events:auto;
+
+}
+
+.viewer-image{
+
+    max-width:90%;
+
+    max-height:90%;
+
+    border-radius:18px;
+
+    transform:scale(.85);
+
+    transition:.35s;
+
+}
+
+.image-viewer.active .viewer-image{
+
+    transform:scale(1);
+
+}
+
+.back-button,
+.gallery-back-button{
+
+    padding:14px 34px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:rgba(145,56,247,.15);
+
+    color:white;
+
+    font-size:17px;
+
+    font-family:"Poppins",sans-serif;
+
+    letter-spacing:.5px;
+
+    cursor:pointer;
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+
+    backdrop-filter:blur(8px);
+
+}
+
+.back-button:hover,
+.gallery-back-button:hover{
+
+    background:rgba(145,56,247,.30);
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+        0 0 18px rgba(145,56,247,.45);
+
+}
+
+.back-button:active,
+.gallery-back-button:active{
+
+    transform:scale(.97);
+
+}
+
+.back-button::before,
+.gallery-back-button::before{
+
+    content:"←";
+
+    display:inline-block;
+
+    margin-right:10px;
+
+    transition:transform .3s ease;
+
+}
+
+.back-button:hover::before,
+.gallery-back-button:hover::before{
+
+    transform:translateX(-5px);
+
+}

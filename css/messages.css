@@ -1,0 +1,15 @@
+.random-message{
+
+    transition:
+        opacity .6s ease,
+        transform .6s ease;
+
+}
+
+.message-hidden{
+
+    opacity:0;
+
+    transform:translateY(8px);
+
+}

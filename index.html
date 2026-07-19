@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improbable</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/panel.css">
+    <link rel="stylesheet" href="css/power.css">
+    <link rel="stylesheet" href="css/messages.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/characters.css">
+    <link rel="stylesheet" href="css/characterList.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/characterProfile.css">
+    <link rel="stylesheet" href="css/laritmia.css">
+</head>
+<body>
+    <!-- Pantalla principal -->
+    <main class="main-screen">
+
+        <div class="sky sunset"></div>
+
+        <div class="sky night"></div>
+
+        <!-- Logo -->
+        <header class="logo-container">
+
+            <h1 class="logo">
+                IMPROBABLE
+            </h1>
+
+        </header>
+
+        <!-- Mensaje aleatorio -->
+        <section class="message-container">
+
+            <p class="random-message">
+                ¿Te gu'tan lo pate'lito?
+            </p>
+
+        </section>
+
+        <!-- Menú principal -->
+        <nav class="main-menu">
+
+    <button class="menu-button" data-panel="power">
+        Sistema de Poder
+    </button>
+
+    <button class="menu-button" data-panel="characters">
+        Personajes
+    </button>
+
+    <button class="menu-button" data-panel="timeline">
+        Cronología
+    </button>
+
+    <button class="menu-button" data-panel="gallery">
+    Galería de Arte
+    </button>
+
+</nav>
+
+
+
+
+    <!-- ==========================================
+     PANEL DEL SISTEMA DE PODER
+========================================== -->
+
+<section class="panel">
+
+    <div class="panel-window">
+
+    
+
+        <div class="panel-header">
+
+            <h2 id="panel-title">
+            Sistema de Poder
+            </h2>
+
+        </div>
+
+        <div class="panel-container">
+
+            <aside class="panel-sidebar">
+
+            <button class="panel-option active" data-topic="Improbables">
+                Improbables
+            </button>
+
+            <button class="panel-option" data-topic="Laritmias">
+                Laritmias
+            </button>
+
+            <button class="panel-option" data-topic="Constantes">
+                Constantes
+            </button>
+
+            <button class="panel-option" data-topic="Primores">
+                Primores
+            </button>
+
+            <button class="panel-option" data-topic="Anomalías">
+                Anomalías
+            </button>
+
+        </aside>
+
+        <section class="panel-content">
+
+            <div class="content-box">
+
+                <!-- Aquí aparecerá el contenido -->
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <div class="panel-footer">
+
+        <button class="back-button">
+
+             Regresar al atardecer
+
+        </button>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- ==========================================
+     GALERÍA DE ARTE
+========================================== -->
+
+<section class="gallery-panel">
+
+    <div class="gallery-window">
+
+        <div class="gallery-header">
+
+            <h2>Galería de Arte</h2>
+
+        </div>
+
+        <div class="gallery-content">
+
+            <div class="gallery-grid">
+
+            </div>
+
+        </div>
+
+        <div class="gallery-footer">
+
+            <button class="gallery-back-button">
+
+                Regresar al atardecer
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="image-viewer">
+
+    <img class="viewer-image">
+
+</div>
+
+
+<!--=========================================
+        PERSONAJES
+==========================================-->
+
+<section class="characters-panel">
+
+    <div class="characters-container">
+
+        <button class="character-zone houses" data-category="casas">
+            <img 
+            class="character-image"
+            src="img/Darryl_2.png">
+
+            <div class="character-label">
+
+            <span>Casas</span>
+
+        </button>
+
+        <button class="character-zone protagonists" data-category="principales">
+
+        <img
+            class="character-image"
+            src="img/Brenda.png"
+        >
+
+    <div class="character-label">
+
+        <span>Principales</span>
+
+    </div>
+
+</button>
+
+        <button class="character-zone villains" data-category="villanos">
+
+            <img 
+            class="character-image"
+            src="img/Juliette.png">
+
+            <div class="character-label">
+
+            <span>Villanos</span>
+
+        </button>
+
+    </div>
+
+    <button class="characters-back-button">
+
+        ← Regresar al atardecer
+
+    </button>
+
+</section>
+
+
+<!--=========================================
+        LISTA DE PERSONAJES
+==========================================-->
+
+<section class="character-list-panel">
+
+    <div class="character-list-window">
+
+        <div class="panel-header">
+
+            <h2 id="character-category-title">
+
+                Categoría
+
+            </h2>
+
+        </div>
+
+            <div class="character-list-content">
+
+            <div class="character-grid">
+
+            </div>
+
+        </div>
+
+        <div class="panel-footer">
+
+            <button class="character-list-back">
+
+                ← Regresar
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<section class="character-profile-panel">
+
+    <div class="character-profile-window">
+
+        <div class="profile-header">
+
+        </div>
+
+        <div class="profile-content">
+
+            <!-- LADO IZQUIERDO -->
+
+           <div class="profile-left">
+
+    <h1 id="profile-name" class="profile-name"></h1>
+
+    <div class="profile-details">
+
+        <div class="detail-row">
+
+            <span class="detail-label">
+                Nombre real: 
+            </span>
+
+            <span id="profile-realname"></span>
+
+        </div>
+
+        <div class="detail-row">
+
+            <span class="detail-label">
+                Fecha de nacimiento: 
+            </span>
+
+            <span id="profile-birthday"></span>
+
+        </div>
+
+        <div class="detail-row">
+
+            <span class="detail-label">
+                Edad: 
+            </span>
+
+            <span id="profile-age"></span>
+
+        </div>
+
+        <div class="detail-row" id="house-row">
+
+            <span class="detail-label">
+             Casa perteneciente:
+            </span>
+
+            <span id="profile-house"></span>
+
+        </div>
+
+        <div class="detail-row">
+
+            <span class="detail-label">
+                Laritmia: 
+            </span>
+
+            <button
+                id="profile-laritmia"
+                class="laritmia-button">
+            </button>
+
+        </div>
+
+        <div class="detail-row">
+
+            <span class="detail-label">
+                Frase favorita: 
+            </span>
+
+            <span id="profile-phrase"></span>
+
+        </div>
+
+    </div>
+
+    <h2 class="profile-section-title">
+        Descripción: 
+    </h2>
+
+    <div
+        id="profile-text"
+        class="profile-text">
+    </div>
+
+</div>
+
+
+
+
+
+
+            <!-- LADO DERECHO -->
+            <div class="profile-right">
+
+    <div class="photo-card" id="photo-card">
+        <img
+                class="photo-clip"
+                src="img/clip.png"
+            >
+        <!-- Cara frontal -->
+
+        <div class="photo-face photo-front">
+
+        
+            <img
+                id="profile-photo"
+                class="profile-photo"
+            >
+
+            <p
+                id="photo-caption"
+                class="photo-caption">
+            </p>
+
+        </div>
+
+        <!-- Cara trasera -->
+
+        <div class="photo-face photo-back">
+
+    <div class="memory-paper">
+
+        <div
+            id="memory-date"
+            class="memory-date">
+        </div>
+
+        <h3
+            id="memory-title"
+            class="memory-title">
+        </h3>
+
+        <div
+            id="memory-content"
+            class="memory-content">
+        </div>
+
+        <div
+            id="memory-signature"
+            class="memory-signature">
+        </div>
+
+    </div>
+
+</div>
+
+        </div>
+
+    </div>
+
+
+
+
+        <div class="panel-footer">
+
+            <button class="character-profile-back">
+
+                
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!--=========================================
+        ARCHIVO ANEXO - LARITMIA
+==========================================-->
+
+<section class="laritmia-modal">
+
+    <div class="laritmia-paper">
+
+        <img
+            class="laritmia-clip"
+            src="img/clip.png"
+        >
+
+        <p class="laritmia-file">
+
+            ARCHIVO ANEXO
+
+        </p>
+
+        <h3 class="laritmia-category">
+
+            CLASIFICACIÓN:
+            LARITMIA
+
+        </h3>
+
+        <h1 id="laritmia-title"></h1>
+
+        <div class="laritmia-line"></div>
+
+        <div
+            id="laritmia-description"
+            class="laritmia-description">
+        </div>
+
+        <button class="laritmia-close">
+
+            ← Volver al expediente
+
+        </button>
+
+    </div>
+
+</section>
+  
+    </main>
+
+    
+
+    <script src="js/script.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/panel.js"></script>
+    <script src="js/transition.js"></script>
+    <script src="js/messages.js"></script>
+    <script src="js/power.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/galleryData.js"></script>
+    <script src="js/characters.js"></script>
+    <script src="js/characterList.js"></script>
+    <script src="js/charactersData.js"></script>
+    <script src="js/characterProfile.js"></script>
+    <script src="js/laritmia.js"></script>
+
+</body>
+</html>

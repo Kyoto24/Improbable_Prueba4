@@ -1,0 +1,293 @@
+/*==========================================
+        LISTA DE PERSONAJES
+==========================================*/
+
+.character-list-panel{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.6s;
+
+    z-index:30;
+
+}
+
+.character-list-panel.active{
+
+    opacity:1;
+
+    pointer-events:auto;
+
+}
+
+.character-list-window{
+
+    width:90%;
+
+    max-width:1450px;
+
+    height:84%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    border-radius:28px;
+
+    background:rgba(18,22,40,.45);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.character-list-content{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:30px;
+
+}
+
+.character-list-content::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+
+.character-list-content::-webkit-scrollbar-thumb{
+
+    background:#999;
+
+    border-radius:10px;
+
+}
+
+.character-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fill,minmax(180px,1fr));
+
+    gap:35px;
+
+}
+
+
+
+
+.character-name h3{
+
+    color:white;
+
+    font-family:"Cinzel", serif;
+
+    font-size:30px;
+
+    letter-spacing:1px;
+
+}
+
+
+.character-card{
+
+    width:180px;
+    height:320px;
+
+    margin:auto;
+
+    overflow:visible;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(12px);
+
+    display:flex;
+
+    flex-direction:column;
+
+    transition:.35s;
+
+}
+
+.character-card img{
+
+    width:170px;
+
+    transform:translateY(5px);
+
+    z-index:5;
+}
+
+.character-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.character-card:hover img{
+
+    transform:translateY(-3px) scale(1.05);
+
+}
+
+.character-body{
+
+    position:relative;
+
+    width:180px;
+
+    height:250px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(12px);
+
+    overflow:hidden;
+
+}
+
+.character-image{
+
+    height:185px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+
+}
+
+.character-image img{
+
+    width:150px;
+
+    transition:.35s;
+
+}
+
+.character-footer{
+
+    height:65px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    background:rgba(0,0,0,.18);
+
+}
+
+.character-footer h3{
+
+    color:white;
+
+    font-size:28px;
+
+    font-family:"Cinzel",serif;
+
+}
+
+.character-card:hover .character-image-area{
+
+
+    top:-2px;
+
+    transform:
+
+        translateY(0px)
+
+        scale(1.0);
+
+}
+
+.character-image-area{
+
+    width:100%;
+    height:220px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    position:relative;
+
+    top:1px;
+}
+
+.character-image-area img{
+
+    width:155px;
+
+    display:block;
+
+    transition:.35s;
+
+}
+
+.character-name{
+
+    height:80px;
+
+    position: relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.18);
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    z-index: 100;
+
+}
+
+.character-name h3{
+
+    color:white;
+
+    font-family:"Cinzel", serif;
+
+    font-size:30px;
+
+    letter-spacing:1px;
+
+}
+
+.character-space{
+
+    height:145px;
+
+}

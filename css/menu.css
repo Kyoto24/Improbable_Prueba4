@@ -1,0 +1,200 @@
+.main-menu{
+
+    position: relative;
+
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+.menu-button{
+
+    background: none;
+    border: none;
+
+    font-family: inherit;
+    font-size: 2.5rem;
+    font-weight: 400;
+
+    color: rgba(255,255,255,.90);
+
+    position: relative;
+
+    cursor: pointer;
+
+    outline: none;
+
+    transition:
+        opacity .5s ease,
+        transform .5s ease,
+        color .3s ease;
+}
+
+/* Botón seleccionado */
+
+.menu-button.active{
+
+    color: #FFD27A;
+
+    text-shadow:
+        0 0 8px rgba(255,210,122,.9),
+        0 0 18px rgba(255,180,70,.8),
+        0 0 35px rgba(255,140,40,.6);
+
+}
+
+.menu-button:focus{
+
+    outline: none;
+
+}
+
+.menu-button:hover{
+
+    color: #FFD27A;
+
+    transform: scale(1.05);
+
+}
+
+.menu-button{
+
+    font-family:inherit;
+
+    font-size:1.1rem;
+
+    
+
+}
+
+.menu-button::after{
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -6px;
+
+    width: 0;
+
+    height: 2px;
+
+    background-color: #FFD27A;
+
+    transition: all .35s ease;
+
+    transform: translateX(-50%);
+}
+
+.menu-button:hover::after{
+
+    width: 100%;
+
+}
+
+.active::after{
+
+    width:100%;
+
+}
+
+.active{
+
+    color:#000000;
+}
+
+.menu-button.active::after{
+
+    width: 100%;
+
+}
+
+.menu-button.hide{
+
+    opacity:0;
+
+    transform:
+
+        translateY(-18px)
+
+        scale(.95);
+
+    transition:
+
+        opacity .2s,
+
+        transform .2s,
+
+        color .3s;
+
+    pointer-events:none;
+
+}
+
+
+
+.back-button{
+
+    background: transparent;
+
+    border: none;
+
+    color: rgba(255,255,255,.8);
+
+    font-size: 18px;
+
+    font-family: "Poppins", sans-serif;
+
+    cursor: pointer;
+
+    transition: .35s;
+
+    padding: 12px 18px;
+
+}
+
+.back-button:hover{
+
+    color: #9138f7;
+
+    transform: translateX(-8px);
+
+}
+
+.back-button:active{
+
+    transform: translateX(-14px);
+
+}
+
+@keyframes pulseGlow{
+
+    0%{
+
+        text-shadow:none;
+
+    }
+
+    50%{
+
+        text-shadow:
+    0 0 12px #FFD27A,
+    0 0 24px #FFB347,
+    0 0 40px #FF8C42,
+    0 0 60px rgba(255,140,66,.7);
+    
+
+    }
+
+    100%{
+
+        text-shadow:none;
+
+    }
+
+}

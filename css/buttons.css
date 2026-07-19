@@ -1,0 +1,60 @@
+/*==================================================
+
+    IMPROBABLE
+    Botones Universales
+
+==================================================*/
+
+.back-button,
+.gallery-back-button,
+.characters-back-button,
+.character-list-back{
+
+    padding:14px 34px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:rgba(145,56,247,.12);
+
+    border:1px solid rgba(145,56,247,.35);
+
+    color:white;
+
+    font-size:17px;
+
+    font-family:"Poppins",sans-serif;
+
+    cursor:pointer;
+
+    transition:
+        transform .3s,
+        background .3s,
+        box-shadow .3s;
+
+}
+
+.back-button:hover,
+.gallery-back-button:hover,
+.characters-back-button:hover,
+.character-list-back:hover{
+
+    background:rgba(145,56,247,.22);
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+        0 0 20px rgba(145,56,247,.55);
+
+}
+
+.back-button:active,
+.gallery-back-button:active,
+.characters-back-button:active,
+.character-list-back:active{
+
+    transform:scale(.96);
+
+}

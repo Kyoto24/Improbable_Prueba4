@@ -1,0 +1,321 @@
+.characters-panel{
+
+    position:fixed;
+    inset:0;
+
+    display:flex;
+
+    opacity:0;
+    pointer-events:none;
+
+    transition:.6s;
+
+    z-index:25;
+
+}
+
+.characters-panel.active{
+
+    opacity:1;
+    pointer-events:auto;
+
+}
+
+.character-category{
+
+    flex:1;
+
+    position:relative;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:.45s;
+
+}
+
+.character-category img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.character-category h2{
+
+    position:absolute;
+
+    bottom:70px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:white;
+
+    font-size:4rem;
+
+    letter-spacing:3px;
+
+    text-shadow:
+
+        0 0 15px black;
+
+}
+
+.character-category:hover{
+
+    flex:1.15;
+
+}
+
+.character-category:hover img{
+
+    transform:
+    scale(1.08);
+
+}
+
+.character-category::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-3px;
+    top:0;
+
+    width:6px;
+    height:100%;
+
+    background:white;
+
+    transform:skew(-12deg);
+
+}
+
+.villains::after{
+
+    display:none;
+
+}
+
+.main{
+
+    flex:1.25;
+
+}
+
+.characters-panel{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.7s;
+
+    z-index:20;
+
+}
+
+.characters-panel.active{
+
+    opacity:1;
+
+    pointer-events:auto;
+
+}
+
+.characters-container{
+
+    width:90%;
+
+    height:75%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr 1fr;
+
+    gap:40px;
+
+}
+
+.character-zone{
+
+    position:relative;
+
+    overflow:visible;
+
+    border:none;
+
+    border-radius:28px;
+
+    cursor:pointer;
+
+    background:linear-gradient(
+        180deg,
+        rgba(65,40,110,.45),
+        rgba(18,22,40,.75)
+    );
+
+    backdrop-filter:blur(12px);
+
+    transition:
+        transform .35s,
+        box-shadow .35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+}
+
+.character-zone img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.character-zone span{
+
+    position:absolute;
+
+    bottom:35px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:55px;
+
+    color:white;
+
+    font-family:"Cinzel",serif;
+
+    letter-spacing:3px;
+
+}
+
+.character-zone:hover{
+
+    transform:scale(1.04);
+
+}
+
+.character-zone:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.characters-back-button{
+
+    margin-top:35px;
+
+}
+
+.character-label{
+
+    height:120px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.25);
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    z-index:3;
+
+}
+
+.character-image{
+
+    position:absolute;
+
+    bottom:50px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:110%;
+
+    transition:
+        transform .45s;
+
+    z-index:2;
+
+    pointer-events:none;
+
+    top: 0;
+
+}
+
+.character-zone:hover{
+
+    transform: 
+        scale(1.06)
+        translateY(-10px);
+
+        
+
+    box-shadow:
+
+        0 20px 40px rgba(0,0,0,.35);
+
+}
+
+.character-zone:hover .character-image{
+
+    transform:
+
+        translateX(-50%)
+        translateY(-2%)
+
+        scale(1.04);
+
+}
+
+.protagonists .character-image{
+    width: 112%;
+    bottom: 15px;
+}
+
+.houses .character-image{
+    width: 96%;
+    bottom: 0;
+}
+
+.villains .character-image{
+    width: 102%;
+    bottom: 10px;
+}

@@ -1,0 +1,179 @@
+/* Reinicio básico */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Página completa */
+body{
+    
+    width: 100%;
+    height: 100vh;
+
+    font-family: "Poppins", sans-serif;
+
+    margin:0;
+
+    overflow:hidden;
+
+}
+
+.logo{
+
+    font-family: "Cinzel", serif;
+    color:#F8F8F8;
+    font-size:6rem;
+
+    font-weight:700;
+
+    letter-spacing:8px;
+    z-index:0;
+
+}
+
+.logo-container{
+
+    margin-bottom:20px;
+
+    z-index:10;
+
+    position:relative;
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+
+}
+
+.message-container{
+
+    margin-bottom:50px;
+
+    z-index:10;
+
+    position:relative;
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+
+}
+
+/* Pantalla principal */
+.main-screen{
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    overflow: hidden;
+
+    justify-content: center;
+    align-items: center;
+    transition: .8s ease;
+
+    
+    background-size:cover;
+    background-position:center;
+}
+
+.main-screen{
+
+   
+
+    background-size: cover;
+    background-position: center;
+
+    transition: background-image .8s ease;
+
+}
+
+.sky{
+
+    position:absolute;
+
+    inset:0;
+
+    background-size:cover;
+
+    background-position:center;
+
+    transition:opacity .9s ease;
+     z-index:0;
+
+}
+
+.sunset{
+
+    background-image:url("../img/fondito.png");
+
+    opacity:1;
+
+}
+.main-screen.night-mode .sunset{
+
+    opacity:0;
+
+}
+
+.night{
+
+    background-image:url("../img/night.png");
+
+    opacity:0;
+
+}
+
+.main-screen.night-mode .night{
+
+    opacity:1;
+
+}
+.main-screen.night{
+
+    background-image: url("../img/night.png");
+
+}
+
+.fade-out{
+
+    opacity: 0;
+
+    transform: translateY(-20px);
+
+}
+
+.fade-in{
+
+    opacity:1 !important;
+
+    transform:translateY(0) !important;
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+
+
+.random-message{
+
+    font-size:1rem;
+
+    font-weight:300;
+
+}
+
